@@ -1,6 +1,6 @@
 from django.urls import path
-from customers.views import generate_report
+from customers.views import create_customer
 
 urlpatterns = [
-    path('get_xml/', generate_report, name='generate_report'),
+    path("create", create_customer, name="create_customer"),
 ]

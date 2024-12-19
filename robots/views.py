@@ -2,7 +2,6 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from pydantic_core._pydantic_core import ValidationError
-
 from robots.models import Robot
 from robots.validators import RobotSchema
 
@@ -44,3 +43,4 @@ def create_robot(request):
     return JsonResponse(
         {"status": "error", "message": "Invalid request method"}, status=405
     )
+
